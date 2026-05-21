@@ -1,0 +1,303 @@
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-size: 14px;
+        }
+
+        /* Barra de Navegação Superior (Simulando o GitHub) */
+        header {
+            background-color: #161b22;
+            padding: 16px 32px;
+            border-bottom: 1px solid #21262d;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-git {
+            fill: #f0f6fc;
+        }
+
+        /* Container Principal em Grid (Padrão do GitHub Desktop) */
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px 32px;
+            display: grid;
+            grid-template-columns: 296px 1fr;
+            gap: 32px;
+        }
+
+        /* Coluna da Esquerda: Perfil */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .avatar-container {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .avatar {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 1px solid #30363d;
+            background: linear-gradient(135deg, #1f6feb, #ff79c6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 96px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .vcard-names {
+            margin-bottom: 16px;
+        }
+
+        .name {
+            font-size: 26px;
+            line-height: 1.25;
+            font-weight: 600;
+            color: #f0f6fc;
+        }
+
+        .username {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            color: #8b949e;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: #b1bac4;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .btn-edit {
+            display: block;
+            width: 100%;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #c9d1d9;
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 24px;
+            transition: 0.2s ease;
+        }
+
+        .btn-edit:hover {
+            background-color: #30363d;
+            border-color: #8b949e;
+        }
+
+        .meta-info {
+            list-style: none;
+            border-top: 1px solid #21262d;
+            padding-top: 16px;
+        }
+
+        .meta-info li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #c9d1d9;
+        }
+
+        .meta-info svg {
+            fill: #8b949e;
+            flex-shrink: 0;
+        }
+
+        .badge-age {
+            display: inline-block;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            background-color: rgba(56, 139, 253, 0.15);
+            border: 1px solid rgba(56, 139, 253, 0.4);
+            border-radius: 2em;
+            color: #58a6ff;
+            margin-top: 8px;
+            align-self: flex-start;
+        }
+
+        /* Coluna da Direita: Conteúdo/Portfólio */
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Abas de Navegação interna */
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #21262d;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .tab {
+            padding: 8px 16px;
+            color: #f0f6fc;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid #f78166; /* Aba ativa */
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Seção README.md artificial */
+        .readme-box {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+        }
+
+        .readme-header {
+            background-color: #161b22;
+            padding: 12px 16px;
+            border-bottom: 1px solid #30363d;
+            border-radius: 6px 6px 0 0;
+            font-family: monospace;
+            color: #8b949e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .readme-body {
+            padding: 24px;
+            line-height: 1.6;
+        }
+
+        .readme-body h1 {
+            font-size: 22px;
+            color: #f0f6fc;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        /* Grid de Repositórios Pinados */
+        .pinned-title {
+            font-size: 16px;
+            font-weight: 400;
+            color: #f0f6fc;
+            margin-bottom: 12px;
+        }
+
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .repo-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .repo-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .repo-name {
+            color: #58a6ff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .repo-name:hover {
+            text-decoration: underline;
+        }
+
+        .repo-desc {
+            font-size: 12px;
+            color: #8b949e;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .repo-status {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            color: #8b949e;
+        }
+
+        .lang-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .lang-html { background-color: #e34c26; }
+        .lang-java { background-color: #b07219; }
+
+        /* Responsividade para telas menores (Celulares) */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                padding: 16px;
+            }
+            .sidebar {
+                align-items: center;
+                text-align: center;
+            }
+            .avatar-container {
+                width: 150px;
+            }
+            .meta-info {
+                width: 100%;
+                align-items: flex-start;
+            }
+            .badge-age {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
